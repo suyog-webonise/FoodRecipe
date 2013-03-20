@@ -1,0 +1,23 @@
+<h3>Recipe For <%= @particular_recipe.name %> </h3>
+
+<h4>Ingredients</h4>
+<%= @particular_recipe.ingredients.html_safe %>
+<h4>Preparation:</h4>
+<%= @particular_recipe.procedure.html_safe %>
+
+
+<h3>Comments</h3>
+<% unless @particular_recipe.comments.blank? %>
+    <%= render @particular_recipe.comments %>
+<% else %>
+    No comments added!
+<% end %>
+
+<h3>Add a comment:</h3>
+<%= render "comments/form" %>
+
+
+
+
+
+

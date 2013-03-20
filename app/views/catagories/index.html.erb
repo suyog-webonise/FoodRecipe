@@ -1,0 +1,4 @@
+<h1>Category List</h1>
+<% @catagories.each do |catagory_name| %>
+    <li><%= link_to catagory_name.name, :controller => 'recipes', :action => 'list', :id=>catagory_name.id %></li>
+<% end %>
